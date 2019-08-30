@@ -1,0 +1,28 @@
+version: '3'
+
+volumes:
+    artigos:
+    html:
+
+services:
+    front:
+        image: nginx:1.16
+        volumes:
+            - html:/usr/share/nginx/html/
+            - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+        ports:
+            - "80:80"
+        depends-on: pelican
+    git:
+        build: ./git
+        volumes:
+            - artigos:/home/git/repo/
+        ports:
+            - "2222:22"
+        depends-on: pelican
+    pelican:
+        build: ./pelican
+        container_name: pelican
+        volumes:
+            - artigos:/srv/pelican/content/
+            - html:/srv/pelican/output/
