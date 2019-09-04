@@ -4,6 +4,9 @@ volumes:
     artigos:
     html:
 
+networks:
+    gitpost:
+
 services:
     front:
         image: nginx:1.16
@@ -17,6 +20,8 @@ services:
         build: ./git
         volumes:
             - artigos:/home/git/repo/
+        networks:
+            - gitpost
         ports:
             - "2222:22"
         depends-on: pelican
@@ -26,3 +31,5 @@ services:
         volumes:
             - artigos:/srv/pelican/content/
             - html:/srv/pelican/output/
+        networks:
+            - gitpost
