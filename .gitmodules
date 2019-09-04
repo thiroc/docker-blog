@@ -1,0 +1,6 @@
+[submodule "pelican/themes/brutalist"]
+	path = pelican/themes/brutalist
+	url = https://github.com/mc-buckets/brutalist.git
+[submodule "pelican/themes/blue-penguin"]
+	path = pelican/themes/blue-penguin
+	url = https://github.com/jody-frankowski/blue-penguin.git
