@@ -2,17 +2,17 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = None
+AUTHOR = 'Thiago Rocha'
 SITENAME = 'Thiago Rocha'
 SITEURL = ''
 
-THEME = './themes/custom'
+THEME = './themes/blue-penguin'
 
 PATH = 'content'
 
 TIMEZONE = 'America/Sao_Paulo'
 
-DEFAULT_LANG = 'pt'
+DEFAULT_LANG = 'pt-br'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
