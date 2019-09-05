@@ -19,4 +19,4 @@ WORKDIR /srv/pelican
 COPY gitpost.py /srv/pelican/
 RUN mkdir ./log/
 #RUN chown www-data:www-data -R /var/log/gitpost
-CMD [ "python", ".gitpost.py" ]
+CMD [ "python", "./gitpost.py" ]

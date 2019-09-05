@@ -15,7 +15,8 @@ services:
             - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
         ports:
             - "80:80"
-        depends-on: pelican
+        depends_on:
+            - pelican
     git:
         build: ./git
         volumes:
@@ -24,7 +25,8 @@ services:
             - gitpost
         ports:
             - "2222:22"
-        depends-on: pelican
+        depends_on:
+            - pelican
     pelican:
         build: ./pelican
         container_name: pelican
