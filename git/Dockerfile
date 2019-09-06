@@ -4,6 +4,7 @@ LABEL mantainer 'Thiago Rocha <me@thiroc.me'
 RUN apk update && apk upgrade
 RUN apk add --no-cache git
 RUN apk add --no-cache git-daemon
+RUN apk add --no-cache curl
 
 RUN addgroup -S git && adduser -S git -G git
 USER git
