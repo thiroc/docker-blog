@@ -22,7 +22,8 @@ services:
         build: ./git
         container_name: git
         volumes:
-            - artigos:/home/git/repo/
+            - ./ssh_keys:/home/git/keys/
+            - artigos:/home/git/content/
         networks:
             - gitpost
         ports:
